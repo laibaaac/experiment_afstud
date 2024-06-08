@@ -1,3 +1,70 @@
-body{
-    background-color: pink;
-}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .menu-toggle-checkbox {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .open-text {
+    margin-left: 10px;
+    font-size: large;
+  }
+  
+  .menu-toggle-checkbox:checked + .menu-toggle .hamburger {
+    background-color: transparent;
+  }
+  
+  .menu-toggle-checkbox:checked + .menu-toggle .open-text {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .menu-toggle-checkbox:checked ~ .menu {
+    display: block;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
